@@ -153,9 +153,8 @@
 
                             <!-- Photo -->
                             <div id="photo-area">
-                                <input type="file" id="uPhoto" name="uPhoto" accept="image/*" required> 
-                                <div id="gallery">
-                                </div>
+                                <input type="file" id="uPhoto" name="uPhoto" accept="image/*"> 
+                                <div id="gallery"></div>
                             </div>
 
                             <!-- Sign up button -->
