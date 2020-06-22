@@ -1,0 +1,12 @@
+.style-container-table {
+    max-height: 197px;
+    overflow: auto;
+}
+
+table {
+    color: white!important;
+}
+
+table tbody tr {
+    background-color: #f05a69;
+}

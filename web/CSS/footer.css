@@ -1,0 +1,15 @@
+footer {
+    margin-top: 30px;
+    color: white;
+    background-color: rgb(243, 75, 81);
+}
+
+footer .footer-style {
+    margin-top: 36px;
+    margin-bottom: 50px;
+}
+
+footer .footer-copyright {
+    background-color: #be2e2e;
+}
+

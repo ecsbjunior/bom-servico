@@ -1,0 +1,132 @@
+/*===================CONTEUDO====================*/
+.card-img-top {
+    width: auto;
+    padding: 15px 15px;
+}
+
+/*===============BARRA DE PESQUISA===============*/
+.searchBox {
+    display:flex;
+    flex-direction:row;
+    height:60px;
+    border-radius:4px;
+    box-shadow:0 1px 2px 0 rgba(0,0,0,.19);
+    background-color:#fff;
+    border:.5px solid #d2d2d2;
+    align-items:center;
+}
+
+.searchBox .submitBtn {
+    float:right;
+    padding:18px 21px;
+    object-fit:contain;
+    border:none;
+    cursor:pointer;
+    background-color:transparent;
+}
+
+.searchBox .submitBtn svg {
+    width:20px; 
+    height:20px;
+    color:#bd1b1b;
+}
+
+.searchBox .clearButton {
+    object-fit:contain;
+    border:none;
+    cursor:pointer;
+    background-color:transparent;
+}
+
+.searchBox button[type=submit]:active:enabled {
+    background-color:#bd1b1b;
+}
+
+.searchBox button[type=submit]:hover {
+    background-color:#bd1b1b;
+    border-radius:0 4px 4px 0;
+}
+
+.searchBox button[type=submit]:hover svg {
+    color:#fff;
+    -webkit-filter:drop-shadow(2px 8px 8px #fff);
+    filter:drop-shadow(2px 8px 8px white);
+}
+
+button:focus {
+    outline:0;
+}
+
+.separator {
+    width:1px;
+    height:60px;
+    border:.5px solid #d2d2d2;
+}
+
+input {
+    width:100%;
+    height:58px;
+    display:block;
+    padding:16px 24px;
+    border-radius:0;
+    border:none;
+    font-family:Nunito Sans,Helvetica Neue,HelveticaNeue,Helvetica,"sans-serif";
+    font-size:20px;
+    outline:none;
+    color:#4a4a4a;
+}
+
+::placeholder {
+    color:#999;
+    font-weight:300;
+}
+
+.none {
+    display:none;
+} 
+
+@-webkit-keyframes shake {
+    0%,to {
+        -webkit-transform:translateZ(0);
+        transform:translateZ(0);
+    }
+    
+    10%,30%,50%,70%,90% {
+        -webkit-transform:translate3d(-10px,0,0);
+        transform:translate3d(-10px,0,0);
+    }
+    
+    20%,40%,60%,80%{
+        -webkit-transform:translate3d(10px,0,0);
+        transform:translate3d(10px,0,0);
+    }
+}
+
+@keyframes shake {
+    0%,to {
+        -webkit-transform:translateZ(0);
+        transform:translateZ(0);
+    }
+    
+    10%,30%,50%,70%,90% {
+        -webkit-transform:translate3d(-10px,0,0);
+        transform:translate3d(-10px,0,0);
+    }
+    
+    20%,40%,60%,80% {
+        -webkit-transform:translate3d(10px,0,0);
+        transform:translate3d(10px,0,0);
+    }
+}
+
+.shake {
+    -webkit-animation-name:shake;
+    animation-name:shake;
+}
+
+.animated{
+    -webkit-animation-duration:1s;
+    animation-duration:1s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}

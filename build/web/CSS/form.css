@@ -1,0 +1,30 @@
+body {
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1440px;
+}
+
+.jumbotron {
+    margin-top: 68px;
+    margin-bottom: calc(2rem + 38px);
+    background-color: transparent;
+    box-shadow: 1px 1px 5px rgb(124, 124, 124);
+}
+
+a {
+    color: rgb(235, 70, 70);
+}
+
+a:hover {
+    color: rgb(192, 37, 37);
+}
+
+label {
+    margin-bottom: 0px;
+}
+
+.style-dtnascimento{
+    margin: auto;
+}
