@@ -86,10 +86,12 @@ public class sUsuario extends HttpServlet {
                     response.getWriter().print(ans);
                     break;
                 case "consultarlogin":
-                    filtro = "UPPER(usu_login) LIKE '" + request.getParameter("filtro").toUpperCase() + "'";
-                    ans = buscarUsuario(filtro);
-                    response.getWriter().print(ans);
-                break;
+                    if(!request.getParameter("acaodaacao").equals("alterar")) {
+                        filtro = "UPPER(usu_login) LIKE '" + request.getParameter("filtro").toUpperCase() + "'";
+                        ans = buscarUsuario(filtro);
+                        response.getWriter().print(ans);
+                    }
+                    break;
                 case "deletar":
                     if (dal.delete(login)) {
                         response.getWriter().print("Apagado com sucesso!");

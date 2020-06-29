@@ -118,7 +118,7 @@
                             </select>
 
                             <div id="photo-area">
-                                <input type="file" id="aPhoto" name="aPhoto" accept="image/*" multiple required>
+                                <input type="file" id="aPhoto" name="aPhoto" accept="image/*" multiple>
                                 <div id="gallery"></div>
                             </div>
 
