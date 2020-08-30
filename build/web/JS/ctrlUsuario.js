@@ -64,13 +64,13 @@ function alterarUsuario(cod){
     })
 }
 
-function salvarUsuario() {
+async function salvarUsuario() {
     event.preventDefault();
     let ans = false;
     let URL = "sUsuario";
     let form = document.getElementById("dUsuario");
 
-    if(handleUser()){
+    if(await handleUser()) {
         var data = new FormData(form);
         data.append('acao', 'salvar');
         data.append('acaodaacao', __acao);
@@ -212,18 +212,20 @@ async function handleUser() {
     let ans = true;
 
     resetBackgroundElementForm(form);
+    if(__acao === 'salvar') {
+        if(! await handleLogin(form.uLogin.value)) {
+            toRedFormData(form.uLogin);
+            ans = false;
+        }
 
-    if(! await handleLogin(form.uLogin.value)) {
-        toRedFormData(form.uLogin);
-        ans = false;
+        if(! await handleEmail(form.uEmail.value)) {
+            toRedFormData(form.uEmail);
+            ans = false;
+        }
     }
     if(!handlePassword(form.uPassword.value, form.uConfirmedPassword.value)) {
         toRedFormData(form.uPassword);
         toRedFormData(form.uConfirmedPassword);
-        ans = false;
-    }
-    if(! await handleEmail(form.uEmail.value)) {
-        toRedFormData(form.uEmail);
         ans = false;
     }
     if(!handleDate(form.uDtNascimento.value)){

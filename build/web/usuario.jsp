@@ -77,13 +77,14 @@
                     <div class="jumbotron jumbotron-lg">
                         <form class="text-center border border-light p-5" method="POST" enctype="multipart/form-data" id="dUsuario" onsubmit="return salvarUsuario()">
 
-                            <p class="h4 mb-4">Sign up</p>
-
+                            <%if (user != null && user.getNivel() == 0){%>
+                            <p class="h4 mb-4">Gerenciar Perfil</p>
+                            <%} else {%>
+                            <p class="h4 mb-4">Sign Up</p>
+                            <%}%>
+                            
                             <!-- Login -->
-                            <input type="text" class="form-control mb-4" placeholder="Login*" id="uLogin" name="uLogin" maxlength="16" required>
-                            <div class="valid-feedback">
-                                Looks good!
-                            </div>
+                            <input type="text" class="form-control mb-4" placeholder="Login*" id="uLogin" name="uLogin" maxlength="16" required <%if (user != null && user.getNivel() == 0){%>readonly<%}%>>
 
                             <!-- Password -->
                             <div class="form-row mb-4">
@@ -105,7 +106,7 @@
                             <hr>
 
                             <!-- E-mail -->
-                            <input type="email" class="form-control mb-4" placeholder="E-mail*" id="uEmail" name="uEmail" maxlength="50" required>
+                            <input type="email" class="form-control mb-4" placeholder="E-mail*" id="uEmail" name="uEmail" maxlength="50" required <%if (user != null && user.getNivel() == 0){%> readonly<%}%>>
 
                             <!-- Nome -->
                             <div class="form-row mb-4">
